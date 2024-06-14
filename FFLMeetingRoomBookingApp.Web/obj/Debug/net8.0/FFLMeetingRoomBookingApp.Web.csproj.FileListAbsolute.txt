@@ -134,3 +134,4 @@ E:\Apps\FFLMeetingRoomBookingApp\FFLMeetingRoomBookingApp.Web\obj\Debug\net8.0\r
 E:\Apps\FFLMeetingRoomBookingApp\FFLMeetingRoomBookingApp.Web\obj\Debug\net8.0\FFLMeetingRoomBookingApp.Web.pdb
 E:\Apps\FFLMeetingRoomBookingApp\FFLMeetingRoomBookingApp.Web\obj\Debug\net8.0\FFLMeetingRoomBookingApp.Web.genruntimeconfig.cache
 E:\Apps\FFLMeetingRoomBookingApp\FFLMeetingRoomBookingApp.Web\obj\Debug\net8.0\ref\FFLMeetingRoomBookingApp.Web.dll
+E:\Apps\FFLMeetingRoomBookingApp\FFLMeetingRoomBookingApp.Web\obj\Debug\net8.0\FFLMeetingRoomBookingApp.Web.sourcelink.json

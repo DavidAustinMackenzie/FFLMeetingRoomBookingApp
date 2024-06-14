@@ -28,6 +28,7 @@ namespace FFLMeetingRoomBookingApp.Web.Controllers
             {
                 FirstName = viewModel.FirstName,
                 LastName = viewModel.LastName,
+                Email = viewModel.Email,
                 UserName = viewModel.UserName,
                 Password = viewModel.Password,
             };
