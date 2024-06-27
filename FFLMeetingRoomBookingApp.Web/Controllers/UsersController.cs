@@ -58,7 +58,7 @@ namespace FFLMeetingRoomBookingApp.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> UpdateUser(User viewModel) 
         {
-            var user = await dbContext.Users.FindAsync(viewModel.Id);
+            var user = await dbContext.Users.FindAsync(viewModel.UserId);
 
             if(user is not null) 
             {
@@ -77,7 +77,7 @@ namespace FFLMeetingRoomBookingApp.Web.Controllers
         {
             var user = await dbContext.Users
                 .AsNoTracking()                
-                .FirstOrDefaultAsync(x => x.Id == viewModel.Id);
+                .FirstOrDefaultAsync(x => x.UserId == viewModel.UserId);
 
             if(user is not null) 
             {

@@ -3,28 +3,20 @@
   "WorkspaceRootPath": "E:\\Apps\\FFLMeetingRoomBookingApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8489840E-15DA-481D-AD4A-7E0E811B3099}|FFLMeetingRoomBookingApp.Web\\FFLMeetingRoomBookingApp.Web.csproj|e:\\apps\\fflmeetingroombookingapp\\fflmeetingroombookingapp.web\\views\\users\\displayusers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8489840E-15DA-481D-AD4A-7E0E811B3099}|FFLMeetingRoomBookingApp.Web\\FFLMeetingRoomBookingApp.Web.csproj|solutionrelative:fflmeetingroombookingapp.web\\views\\users\\displayusers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8489840E-15DA-481D-AD4A-7E0E811B3099}|FFLMeetingRoomBookingApp.Web\\FFLMeetingRoomBookingApp.Web.csproj|e:\\apps\\fflmeetingroombookingapp\\fflmeetingroombookingapp.web\\views\\users\\updateuser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8489840E-15DA-481D-AD4A-7E0E811B3099}|FFLMeetingRoomBookingApp.Web\\FFLMeetingRoomBookingApp.Web.csproj|solutionrelative:fflmeetingroombookingapp.web\\views\\users\\updateuser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8489840E-15DA-481D-AD4A-7E0E811B3099}|FFLMeetingRoomBookingApp.Web\\FFLMeetingRoomBookingApp.Web.csproj|e:\\apps\\fflmeetingroombookingapp\\fflmeetingroombookingapp.web\\views\\users\\adduser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8489840E-15DA-481D-AD4A-7E0E811B3099}|FFLMeetingRoomBookingApp.Web\\FFLMeetingRoomBookingApp.Web.csproj|solutionrelative:fflmeetingroombookingapp.web\\views\\users\\adduser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8489840E-15DA-481D-AD4A-7E0E811B3099}|FFLMeetingRoomBookingApp.Web\\FFLMeetingRoomBookingApp.Web.csproj|e:\\apps\\fflmeetingroombookingapp\\fflmeetingroombookingapp.web\\models\\adduserviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8489840E-15DA-481D-AD4A-7E0E811B3099}|FFLMeetingRoomBookingApp.Web\\FFLMeetingRoomBookingApp.Web.csproj|solutionrelative:fflmeetingroombookingapp.web\\models\\adduserviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8489840E-15DA-481D-AD4A-7E0E811B3099}|FFLMeetingRoomBookingApp.Web\\FFLMeetingRoomBookingApp.Web.csproj|e:\\apps\\fflmeetingroombookingapp\\fflmeetingroombookingapp.web\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8489840E-15DA-481D-AD4A-7E0E811B3099}|FFLMeetingRoomBookingApp.Web\\FFLMeetingRoomBookingApp.Web.csproj|solutionrelative:fflmeetingroombookingapp.web\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8489840E-15DA-481D-AD4A-7E0E811B3099}|FFLMeetingRoomBookingApp.Web\\FFLMeetingRoomBookingApp.Web.csproj|e:\\apps\\fflmeetingroombookingapp\\fflmeetingroombookingapp.web\\models\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8489840E-15DA-481D-AD4A-7E0E811B3099}|FFLMeetingRoomBookingApp.Web\\FFLMeetingRoomBookingApp.Web.csproj|solutionrelative:fflmeetingroombookingapp.web\\models\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Apps\\FFLMeetingRoomBookingApp\\FFLMeetingRoomBookingApp.Web\\Migrations\\20240627081213_AddedComplexEntityType.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:FFLMeetingRoomBookingApp.Web\\Migrations\\20240627081213_AddedComplexEntityType.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8489840E-15DA-481D-AD4A-7E0E811B3099}|FFLMeetingRoomBookingApp.Web\\FFLMeetingRoomBookingApp.Web.csproj|e:\\apps\\fflmeetingroombookingapp\\fflmeetingroombookingapp.web\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8489840E-15DA-481D-AD4A-7E0E811B3099}|FFLMeetingRoomBookingApp.Web\\FFLMeetingRoomBookingApp.Web.csproj|solutionrelative:fflmeetingroombookingapp.web\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8489840E-15DA-481D-AD4A-7E0E811B3099}|FFLMeetingRoomBookingApp.Web\\FFLMeetingRoomBookingApp.Web.csproj|e:\\apps\\fflmeetingroombookingapp\\fflmeetingroombookingapp.web\\models\\entities\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8489840E-15DA-481D-AD4A-7E0E811B3099}|FFLMeetingRoomBookingApp.Web\\FFLMeetingRoomBookingApp.Web.csproj|solutionrelative:fflmeetingroombookingapp.web\\models\\entities\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,84 +26,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DisplayUsers.cshtml",
-              "DocumentMoniker": "E:\\Apps\\FFLMeetingRoomBookingApp\\FFLMeetingRoomBookingApp.Web\\Views\\Users\\DisplayUsers.cshtml",
-              "RelativeDocumentMoniker": "FFLMeetingRoomBookingApp.Web\\Views\\Users\\DisplayUsers.cshtml",
-              "ToolTip": "E:\\Apps\\FFLMeetingRoomBookingApp\\FFLMeetingRoomBookingApp.Web\\Views\\Users\\DisplayUsers.cshtml",
-              "RelativeToolTip": "FFLMeetingRoomBookingApp.Web\\Views\\Users\\DisplayUsers.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-14T10:45:12.722Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "UpdateUser.cshtml",
-              "DocumentMoniker": "E:\\Apps\\FFLMeetingRoomBookingApp\\FFLMeetingRoomBookingApp.Web\\Views\\Users\\UpdateUser.cshtml",
-              "RelativeDocumentMoniker": "FFLMeetingRoomBookingApp.Web\\Views\\Users\\UpdateUser.cshtml",
-              "ToolTip": "E:\\Apps\\FFLMeetingRoomBookingApp\\FFLMeetingRoomBookingApp.Web\\Views\\Users\\UpdateUser.cshtml",
-              "RelativeToolTip": "FFLMeetingRoomBookingApp.Web\\Views\\Users\\UpdateUser.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACMAAAAOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-14T10:44:50.631Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AddUserViewModel.cs",
-              "DocumentMoniker": "E:\\Apps\\FFLMeetingRoomBookingApp\\FFLMeetingRoomBookingApp.Web\\Models\\AddUserViewModel.cs",
-              "RelativeDocumentMoniker": "FFLMeetingRoomBookingApp.Web\\Models\\AddUserViewModel.cs",
-              "ToolTip": "E:\\Apps\\FFLMeetingRoomBookingApp\\FFLMeetingRoomBookingApp.Web\\Models\\AddUserViewModel.cs",
-              "RelativeToolTip": "FFLMeetingRoomBookingApp.Web\\Models\\AddUserViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAApAAAA",
+              "Title": "20240627081213_AddedComplexEntityType.cs",
+              "DocumentMoniker": "E:\\Apps\\FFLMeetingRoomBookingApp\\FFLMeetingRoomBookingApp.Web\\Migrations\\20240627081213_AddedComplexEntityType.cs",
+              "RelativeDocumentMoniker": "FFLMeetingRoomBookingApp.Web\\Migrations\\20240627081213_AddedComplexEntityType.cs",
+              "ToolTip": "E:\\Apps\\FFLMeetingRoomBookingApp\\FFLMeetingRoomBookingApp.Web\\Migrations\\20240627081213_AddedComplexEntityType.cs",
+              "RelativeToolTip": "FFLMeetingRoomBookingApp.Web\\Migrations\\20240627081213_AddedComplexEntityType.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T10:43:37.633Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "E:\\Apps\\FFLMeetingRoomBookingApp\\FFLMeetingRoomBookingApp.Web\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "FFLMeetingRoomBookingApp.Web\\Controllers\\UsersController.cs",
-              "ToolTip": "E:\\Apps\\FFLMeetingRoomBookingApp\\FFLMeetingRoomBookingApp.Web\\Controllers\\UsersController.cs",
-              "RelativeToolTip": "FFLMeetingRoomBookingApp.Web\\Controllers\\UsersController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T10:42:52.256Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "User.cs",
-              "DocumentMoniker": "E:\\Apps\\FFLMeetingRoomBookingApp\\FFLMeetingRoomBookingApp.Web\\Models\\Entities\\User.cs",
-              "RelativeDocumentMoniker": "FFLMeetingRoomBookingApp.Web\\Models\\Entities\\User.cs",
-              "ToolTip": "E:\\Apps\\FFLMeetingRoomBookingApp\\FFLMeetingRoomBookingApp.Web\\Models\\Entities\\User.cs",
-              "RelativeToolTip": "FFLMeetingRoomBookingApp.Web\\Models\\Entities\\User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T10:41:48.377Z",
+              "WhenOpened": "2024-06-27T08:12:13.779Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "AddUser.cshtml",
-              "DocumentMoniker": "E:\\Apps\\FFLMeetingRoomBookingApp\\FFLMeetingRoomBookingApp.Web\\Views\\Users\\AddUser.cshtml",
-              "RelativeDocumentMoniker": "FFLMeetingRoomBookingApp.Web\\Views\\Users\\AddUser.cshtml",
-              "ToolTip": "E:\\Apps\\FFLMeetingRoomBookingApp\\FFLMeetingRoomBookingApp.Web\\Views\\Users\\AddUser.cshtml",
-              "RelativeToolTip": "FFLMeetingRoomBookingApp.Web\\Views\\Users\\AddUser.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-14T10:41:07.92Z",
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "E:\\Apps\\FFLMeetingRoomBookingApp\\FFLMeetingRoomBookingApp.Web\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "FFLMeetingRoomBookingApp.Web\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "E:\\Apps\\FFLMeetingRoomBookingApp\\FFLMeetingRoomBookingApp.Web\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "FFLMeetingRoomBookingApp.Web\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T08:11:04.111Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "User.cs",
+              "DocumentMoniker": "E:\\Apps\\FFLMeetingRoomBookingApp\\FFLMeetingRoomBookingApp.Web\\Models\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "FFLMeetingRoomBookingApp.Web\\Models\\Entities\\User.cs",
+              "ToolTip": "E:\\Apps\\FFLMeetingRoomBookingApp\\FFLMeetingRoomBookingApp.Web\\Models\\Entities\\User.cs",
+              "RelativeToolTip": "FFLMeetingRoomBookingApp.Web\\Models\\Entities\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T08:10:06.557Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Booking.cs",
+              "DocumentMoniker": "E:\\Apps\\FFLMeetingRoomBookingApp\\FFLMeetingRoomBookingApp.Web\\Models\\Entities\\Booking.cs",
+              "RelativeDocumentMoniker": "FFLMeetingRoomBookingApp.Web\\Models\\Entities\\Booking.cs",
+              "ToolTip": "E:\\Apps\\FFLMeetingRoomBookingApp\\FFLMeetingRoomBookingApp.Web\\Models\\Entities\\Booking.cs",
+              "RelativeToolTip": "FFLMeetingRoomBookingApp.Web\\Models\\Entities\\Booking.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T08:10:05.889Z",
               "EditorCaption": ""
             }
           ]

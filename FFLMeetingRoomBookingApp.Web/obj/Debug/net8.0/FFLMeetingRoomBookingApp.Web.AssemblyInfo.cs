@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FFLMeetingRoomBookingApp.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+91bd46ccc0b2d18c690abff232f2dac9a2c17603")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ddf50a1f8bd654a313734da2cfcaa62f19648ca8")]
 [assembly: System.Reflection.AssemblyProductAttribute("FFLMeetingRoomBookingApp.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FFLMeetingRoomBookingApp.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
