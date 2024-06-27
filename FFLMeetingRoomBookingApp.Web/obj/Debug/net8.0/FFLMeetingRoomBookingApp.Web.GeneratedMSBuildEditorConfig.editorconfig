@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = E:\Apps\FFLMeetingRoomBookingApp\FFLMeetingRoomBookingApp.Web
 build_property._RazorSourceGeneratorDebug = 
 
+[E:/Apps/FFLMeetingRoomBookingApp/FFLMeetingRoomBookingApp.Web/Views/Bookings/AddBooking.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va2luZ3NcQWRkQm9va2luZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/Apps/FFLMeetingRoomBookingApp/FFLMeetingRoomBookingApp.Web/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
