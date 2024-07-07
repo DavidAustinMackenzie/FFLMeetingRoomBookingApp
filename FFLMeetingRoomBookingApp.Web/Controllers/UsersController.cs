@@ -2,6 +2,7 @@
 using FFLMeetingRoomBookingApp.Web.Models;
 using FFLMeetingRoomBookingApp.Web.Models.Entities;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
 namespace FFLMeetingRoomBookingApp.Web.Controllers
@@ -22,19 +23,14 @@ namespace FFLMeetingRoomBookingApp.Web.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddUser(AddUserViewModel viewModel)
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> AddUser([Bind("UserId,FirstName,LastName,Email,UserName,Password")] User user)
         {
-            var user = new User
+            if (ModelState.IsValid) 
             {
-                FirstName = viewModel.FirstName,
-                LastName = viewModel.LastName,
-                Email = viewModel.Email,
-                UserName = viewModel.UserName,
-                Password = viewModel.Password,
-            };
-
-            await dbContext.Users.AddAsync(user);
-            await dbContext.SaveChangesAsync();
+                await dbContext.Users.AddAsync(user);
+                await dbContext.SaveChangesAsync();
+            }
 
             return RedirectToAction("DisplayUsers", "Users");
         }

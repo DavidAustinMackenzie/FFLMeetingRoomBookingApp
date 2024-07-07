@@ -19,5 +19,7 @@ namespace FFLMeetingRoomBookingApp.Web.Models
         public DateTime CreatedAt { get; set; }
 
         public DateTime UpdatedAt { get; set; }
+
+        public virtual ICollection<User> Users { get; set; }
     }
 }

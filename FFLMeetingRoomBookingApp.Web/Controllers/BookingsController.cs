@@ -2,6 +2,7 @@
 using FFLMeetingRoomBookingApp.Web.Models;
 using FFLMeetingRoomBookingApp.Web.Models.Entities;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
 namespace FFLMeetingRoomBookingApp.Web.Controllers
@@ -16,8 +17,15 @@ namespace FFLMeetingRoomBookingApp.Web.Controllers
         }
 
         [HttpGet]
-        public IActionResult AddBooking()
+        public async Task<IActionResult> AddBooking()
         {
+            //var users = await dbContext.Users.ToListAsync();
+            //ViewBag.Users = users; // Pass users to ViewBag or use a view model
+
+            var usersQuery = from u in dbContext.Users
+                                   orderby u.FirstName
+                                   select u;
+            ViewBag.Users = new SelectList(usersQuery.AsNoTracking(), "UserId", "FirstName");
             return View();
         }
 
@@ -32,9 +40,11 @@ namespace FFLMeetingRoomBookingApp.Web.Controllers
                 MeetingDuration = viewModel.MeetingDuration,
                 BookedBy = viewModel.BookedBy,
                 BookedFor = viewModel.BookedFor,
-                CreatedAt = viewModel.CreatedAt,
-                UpdatedAt = viewModel.UpdatedAt,
+                CreatedAt = DateTime.Now,
+                UpdatedAt = DateTime.Now,
             };
+
+
 
             await dbContext.Bookings.AddAsync(booking);
             await dbContext.SaveChangesAsync();
