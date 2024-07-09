@@ -52,32 +52,57 @@ namespace FFLMeetingRoomBookingApp.Web.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> UpdateUser(User viewModel) 
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> UpdateUser(int? UserId) 
         {
-            var user = await dbContext.Users.FindAsync(viewModel.UserId);
-
-            if(user is not null) 
+            if (UserId == null)
             {
-                user.FirstName = viewModel.FirstName;
-                user.LastName = viewModel.LastName;
-                user.UserName = viewModel.UserName;
-
-                await dbContext.SaveChangesAsync();
+                return NotFound();
             }
+
+            var userToUpdate = await dbContext.Users.FirstOrDefaultAsync(u => u.UserId == UserId);
+            if (await TryUpdateModelAsync<User>(
+                userToUpdate,
+                "",
+                u => u.FirstName, 
+                u => u.LastName, 
+                u => u.Email,
+                u => u.UserName,
+                u => u.Password))
+                {
+                    try
+                    {
+                        await dbContext.SaveChangesAsync();
+                        
+                    }
+                    catch (DbUpdateException /* ex */)
+                    {
+                        //Log the error (uncomment ex variable name and write a log.)
+                        ModelState.AddModelError("", "Unable to save changes. " +
+                            "Try again, and if the problem persists, " +
+                            "see your system administrator.");
+                    }
+                }
 
             return RedirectToAction("DisplayUsers", "Users");
         }
 
         [HttpPost]
-        public async Task<IActionResult> DeleteUser(User viewModel) 
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteUser(int? UserId) 
         {
+            if (UserId == null)
+            {
+                return NotFound();
+            }
+
             var user = await dbContext.Users
                 .AsNoTracking()                
-                .FirstOrDefaultAsync(x => x.UserId == viewModel.UserId);
+                .FirstOrDefaultAsync(u => u.UserId == UserId);
 
             if(user is not null) 
             {
-                dbContext.Users.Remove(viewModel);
+                dbContext.Users.Remove(user);
                 await dbContext.SaveChangesAsync();
             }
 
