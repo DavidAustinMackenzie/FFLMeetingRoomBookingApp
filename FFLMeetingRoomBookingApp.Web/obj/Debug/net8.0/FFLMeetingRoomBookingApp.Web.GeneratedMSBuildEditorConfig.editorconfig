@@ -22,6 +22,14 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va2luZ3NcQWRkQm9va2luZy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Apps/FFLMeetingRoomBookingApp/FFLMeetingRoomBookingApp.Web/Views/Bookings/DisplayBookings.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va2luZ3NcRGlzcGxheUJvb2tpbmdzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Apps/FFLMeetingRoomBookingApp/FFLMeetingRoomBookingApp.Web/Views/Bookings/UpdateBooking.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va2luZ3NcVXBkYXRlQm9va2luZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Apps/FFLMeetingRoomBookingApp/FFLMeetingRoomBookingApp.Web/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

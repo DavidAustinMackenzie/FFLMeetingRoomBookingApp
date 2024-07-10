@@ -14,9 +14,7 @@ namespace FFLMeetingRoomBookingApp.Web.Models.Entities
 
         public double MeetingDuration { get; set; }
 
-        public int? BookedById { get; set; }
-
-        public User BookedBy { get; set; }
+        public string BookedBy { get; set; }
 
         public int? BookedForId { get; set; }
 
