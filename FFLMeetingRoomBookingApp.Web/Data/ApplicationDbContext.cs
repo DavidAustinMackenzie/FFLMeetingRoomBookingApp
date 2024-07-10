@@ -17,7 +17,6 @@ namespace FFLMeetingRoomBookingApp.Web.Data
         {
             modelBuilder.Entity<Booking>(b =>
             {
-                b.ComplexProperty(e => e.BookedBy);
                 b.ComplexProperty(e => e.BookedFor);
             });
         }

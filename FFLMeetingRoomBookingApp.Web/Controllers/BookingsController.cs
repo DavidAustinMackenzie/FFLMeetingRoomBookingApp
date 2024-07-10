@@ -34,7 +34,6 @@ namespace FFLMeetingRoomBookingApp.Web.Controllers
             }
 
             PopulateUsersDropDownList(booking.BookedForId);
-            PopulateUsersDropDownList(booking.BookedById);
 
             return View();
         }
@@ -78,7 +77,7 @@ namespace FFLMeetingRoomBookingApp.Web.Controllers
             if(booking is not null) 
             {
                 dbContext.Bookings.Remove(booking);
-                await dbContext.SaveChangsAsync();
+                await dbContext.SaveChangesAsync();
             }
 
             return RedirectToAction("DisplayBookings", "Bookings");

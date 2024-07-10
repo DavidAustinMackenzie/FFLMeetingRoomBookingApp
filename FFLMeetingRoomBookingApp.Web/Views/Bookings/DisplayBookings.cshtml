@@ -4,7 +4,7 @@
 @{
 }
 
-@model List<FFLMeetingRoomApp.Web.Models.Entities.Booking>
+@model List<FFLMeetingRoomBookingApp.Web.Models.Entities.Booking>
 
 <h1>Bookings</h1>
 @if(@Model.Count > 0)
@@ -34,7 +34,7 @@
                     <td>@booking.NumberOfPeople</td>
                     <td>@booking.MeetingDuration</td>
                     <td>@booking.BookedBy</td>
-                    <td>@booking.User.Name</td>
+                    <td>@booking.BookedFor.Name</td>
                     <td>@booking.CreatedAt</td>
                     <td>@booking.UpdatedAt</td>
                     <td>
