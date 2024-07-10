@@ -19,37 +19,32 @@ namespace FFLMeetingRoomBookingApp.Web.Controllers
         [HttpGet]
         public async Task<IActionResult> AddBooking()
         {
-            //var users = await dbContext.Users.ToListAsync();
-            //ViewBag.Users = users; // Pass users to ViewBag or use a view model
-
-            var usersQuery = from u in dbContext.Users
-                                   orderby u.FirstName
-                                   select u;
-            ViewBag.Users = new SelectList(usersQuery.AsNoTracking(), "UserId", "FirstName");
+            PopulateUsersDropDownList();
             return View();
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddBooking(AddBookingViewModel viewModel) 
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> AddBooking([Bind("BookingId,BookingDate,MeetingRoom,NumberOfPeople,MeetingDuration,BookedById,BookedForId")] Booking booking) 
         {
-            var booking = new Booking 
+            if (ModelState.IsValid)
             {
-                BookingDate = viewModel.BookingDate,
-                MeetingRoom = viewModel.MeetingRoom,
-                NumberOfPeople = viewModel.NumberOfPeople,
-                MeetingDuration = viewModel.MeetingDuration,
-                BookedBy = viewModel.BookedBy,
-                BookedFor = viewModel.BookedFor,
-                CreatedAt = DateTime.Now,
-                UpdatedAt = DateTime.Now,
-            };
+                await dbContext.Bookings.AddAsync(booking);
+                await dbContext.SaveChangesAsync();
+            }
 
-
-
-            await dbContext.Bookings.AddAsync(booking);
-            await dbContext.SaveChangesAsync();
+            PopulateUsersDropDownList(booking.BookedForId);
+            PopulateUsersDropDownList(booking.BookedById);
 
             return View();
+        }
+
+        private void PopulateUsersDropDownList(object selectedUser = null)
+        {
+            var usersQuery = from u in dbContext.Users
+                             orderby u.Name
+                             select u;
+            ViewBag.Users = new SelectList(usersQuery.AsNoTracking(), "UserId", "Name", selectedUser);
         }
     }
 }

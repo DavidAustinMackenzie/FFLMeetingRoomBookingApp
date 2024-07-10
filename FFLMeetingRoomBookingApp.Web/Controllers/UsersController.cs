@@ -24,7 +24,7 @@ namespace FFLMeetingRoomBookingApp.Web.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> AddUser([Bind("UserId,FirstName,LastName,Email,UserName,Password")] User user)
+        public async Task<IActionResult> AddUser([Bind("UserId,Name,Email,UserName,Password")] User user)
         {
             if (ModelState.IsValid) 
             {
@@ -64,8 +64,7 @@ namespace FFLMeetingRoomBookingApp.Web.Controllers
             if (await TryUpdateModelAsync<User>(
                 userToUpdate,
                 "",
-                u => u.FirstName, 
-                u => u.LastName, 
+                u => u.Name,
                 u => u.Email,
                 u => u.UserName,
                 u => u.Password))

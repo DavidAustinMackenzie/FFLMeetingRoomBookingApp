@@ -4,7 +4,7 @@
 @{
 }
 
-@model FFLMeetingRoomBookingApp.Web.Models.AddBookingViewModel
+@model FFLMeetingRoomBookingApp.Web.Models.Entities.Booking
 
 <h1>Add Booking</h1>
 
@@ -30,7 +30,17 @@
     </div>
 
     <div class="mt-3">
-        <select asp-for="BookedBy" asp-items="ViewBag.Users"></select>
+        <label class="form-label" for="BookedBy">Booked By:</label>
+        <select asp-for="BookedBy" asp-items="ViewBag.Users">
+            <option value="">-- Select User --</option>
+        </select>
+    </div>
+
+    <div class="mt-3">
+        <label class="form-label" for="BookedBy">Booked For:</label>
+        <select asp-for="BookedFor" asp-items="ViewBag.Users">
+            <option value="">-- Select User --</option>
+        </select>
     </div>
 
     <div class="mt-3">
