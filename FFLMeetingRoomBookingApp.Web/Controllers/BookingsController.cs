@@ -1,94 +1,176 @@
-﻿using FFLMeetingRoomBookingApp.Web.Data;
-using FFLMeetingRoomBookingApp.Web.Models;
-using FFLMeetingRoomBookingApp.Web.Models.Entities;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using FFLMeetingRoomBookingApp.Web.Data;
+using FFLMeetingRoomBookingApp.Web.Models;
 
 namespace FFLMeetingRoomBookingApp.Web.Controllers
 {
     public class BookingsController : Controller
     {
-        private readonly ApplicationDbContext dbContext;
+        private readonly FFLMeetingRoomBookingAppWebContext _context;
 
-        public BookingsController(ApplicationDbContext dbContext) 
+        public BookingsController(FFLMeetingRoomBookingAppWebContext context)
         {
-            this.dbContext = dbContext;
+            _context = context;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> AddBooking()
+        // GET: Bookings
+        public async Task<IActionResult> Index()
         {
-            PopulateUsersDropDownList();
-            return View();
+            var fFLMeetingRoomBookingAppWebContext = _context.Booking.Include(b => b.MeetingRoom).Include(b => b.User);
+            return View(await fFLMeetingRoomBookingAppWebContext.ToListAsync());
         }
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> AddBooking([Bind("BookingId,BookingDate,MeetingRoom,NumberOfPeople,MeetingDuration,BookedById,BookedForId")] Booking booking) 
+        // GET: Bookings/Details/5
+        public async Task<IActionResult> Details(int? id)
         {
-            if (ModelState.IsValid)
-            {
-                await dbContext.Bookings.AddAsync(booking);
-                await dbContext.SaveChangesAsync();
-            }
-
-            PopulateUsersDropDownList(booking.BookedForId);
-
-            return View();
-        }
-
-        [HttpGet]
-        public async Task<IActionResult> DisplayBookings() 
-        {
-            var bookings = await dbContext.Bookings.ToListAsync();
-
-            return View(bookings);
-        }
-
-        [HttpGet]
-        public async Task<IActionResult> UpdateBooking(int id) 
-        {
-            var booking = await dbContext.Bookings.FindAsync(id);
-
-            return View(booking);
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> UpdateBooking(int? BookingId)
-        {
-            return RedirectToAction("DisplayBookings", "Bookings");
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteBooking(int? BookingId)
-        {
-            if(BookingId == null)
+            if (id == null)
             {
                 return NotFound();
             }
 
-            var booking = await dbContext.Bookings
-                .AsNoTracking()
-                .FirstOrDefaultAsync(b => b.BookingId == BookingId);
-
-            if(booking is not null) 
+            var booking = await _context.Booking
+                .Include(b => b.MeetingRoom)
+                .Include(b => b.User)
+                .FirstOrDefaultAsync(m => m.BookingId == id);
+            if (booking == null)
             {
-                dbContext.Bookings.Remove(booking);
-                await dbContext.SaveChangesAsync();
+                return NotFound();
             }
 
-            return RedirectToAction("DisplayBookings", "Bookings");
+            return View(booking);
         }
 
-        private void PopulateUsersDropDownList(object selectedUser = null)
+        // GET: Bookings/Create
+        public IActionResult Create()
         {
-            var usersQuery = from u in dbContext.Users
-                             orderby u.Name
-                             select u;
-            ViewBag.Users = new SelectList(usersQuery.AsNoTracking(), "UserId", "Name", selectedUser);
+            ViewData["MeetingRoomId"] = new SelectList(_context.MeetingRoom, "MeetingRoomId", "MeetingRoomId");
+            ViewData["UserId"] = new SelectList(_context.User, "UserId", "UserId");
+            return View();
+        }
+
+        // POST: Bookings/Create
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create([Bind("BookingId,MeetingRoomId,UserId,BookingDate,NumberOfPeople,MeetingDuration,CreatedAt,UpdatedAt")] Booking booking)
+        {
+            /*if (ModelState.IsValid)
+            {
+                _context.Add(booking);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }*/
+
+            _context.Add(booking);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+            
+
+            ViewData["MeetingRoomId"] = new SelectList(_context.MeetingRoom, "MeetingRoomId", "MeetingRoomId", booking.MeetingRoomId);
+            ViewData["UserId"] = new SelectList(_context.User, "UserId", "UserId", booking.UserId);
+            return View(booking);
+        }
+
+        // GET: Bookings/Edit/5
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var booking = await _context.Booking.FindAsync(id);
+            if (booking == null)
+            {
+                return NotFound();
+            }
+            ViewData["MeetingRoomId"] = new SelectList(_context.MeetingRoom, "MeetingRoomId", "MeetingRoomId", booking.MeetingRoomId);
+            ViewData["UserId"] = new SelectList(_context.User, "UserId", "UserId", booking.UserId);
+            return View(booking);
+        }
+
+        // POST: Bookings/Edit/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, [Bind("BookingId,MeetingRoomId,UserId,BookingDate,NumberOfPeople,MeetingDuration,CreatedAt,UpdatedAt")] Booking booking)
+        {
+            if (id != booking.BookingId)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _context.Update(booking);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!BookingExists(booking.BookingId))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction(nameof(Index));
+            }
+            ViewData["MeetingRoomId"] = new SelectList(_context.MeetingRoom, "MeetingRoomId", "MeetingRoomId", booking.MeetingRoomId);
+            ViewData["UserId"] = new SelectList(_context.User, "UserId", "UserId", booking.UserId);
+            return View(booking);
+        }
+
+        // GET: Bookings/Delete/5
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var booking = await _context.Booking
+                .Include(b => b.MeetingRoom)
+                .Include(b => b.User)
+                .FirstOrDefaultAsync(m => m.BookingId == id);
+            if (booking == null)
+            {
+                return NotFound();
+            }
+
+            return View(booking);
+        }
+
+        // POST: Bookings/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var booking = await _context.Booking.FindAsync(id);
+            if (booking != null)
+            {
+                _context.Booking.Remove(booking);
+            }
+
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+
+        private bool BookingExists(int id)
+        {
+            return _context.Booking.Any(e => e.BookingId == id);
         }
     }
 }

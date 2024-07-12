@@ -1,13 +1,13 @@
-using FFLMeetingRoomBookingApp.Web.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using FFLMeetingRoomBookingApp.Web.Data;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<FFLMeetingRoomBookingAppWebContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("FFLMeetingRoomBookingAppWebContext") ?? throw new InvalidOperationException("Connection string 'FFLMeetingRoomBookingAppWebContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
-// Add dbcontext injection
-builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("FFLMeetingRoomBooking")));
 
 var app = builder.Build();
 

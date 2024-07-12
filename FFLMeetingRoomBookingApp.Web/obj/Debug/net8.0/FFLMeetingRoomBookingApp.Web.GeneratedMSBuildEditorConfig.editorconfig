@@ -1,11 +1,19 @@
 is_global = true
 build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = FFLMeetingRoomBookingApp.Web
 build_property.RootNamespace = FFLMeetingRoomBookingApp.Web
@@ -18,16 +26,24 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Apps\FFLMeetingRoomBookingApp\FFLMeetingRoomBookingApp.Web
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Apps/FFLMeetingRoomBookingApp/FFLMeetingRoomBookingApp.Web/Views/Bookings/AddBooking.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va2luZ3NcQWRkQm9va2luZy5jc2h0bWw=
+[C:/Apps/FFLMeetingRoomBookingApp/FFLMeetingRoomBookingApp.Web/Views/Bookings/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va2luZ3NcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Apps/FFLMeetingRoomBookingApp/FFLMeetingRoomBookingApp.Web/Views/Bookings/DisplayBookings.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va2luZ3NcRGlzcGxheUJvb2tpbmdzLmNzaHRtbA==
+[C:/Apps/FFLMeetingRoomBookingApp/FFLMeetingRoomBookingApp.Web/Views/Bookings/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va2luZ3NcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Apps/FFLMeetingRoomBookingApp/FFLMeetingRoomBookingApp.Web/Views/Bookings/UpdateBooking.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va2luZ3NcVXBkYXRlQm9va2luZy5jc2h0bWw=
+[C:/Apps/FFLMeetingRoomBookingApp/FFLMeetingRoomBookingApp.Web/Views/Bookings/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va2luZ3NcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Apps/FFLMeetingRoomBookingApp/FFLMeetingRoomBookingApp.Web/Views/Bookings/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va2luZ3NcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Apps/FFLMeetingRoomBookingApp/FFLMeetingRoomBookingApp.Web/Views/Bookings/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va2luZ3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Apps/FFLMeetingRoomBookingApp/FFLMeetingRoomBookingApp.Web/Views/Home/Index.cshtml]
@@ -38,6 +54,26 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Apps/FFLMeetingRoomBookingApp/FFLMeetingRoomBookingApp.Web/Views/MeetingRooms/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVldGluZ1Jvb21zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Apps/FFLMeetingRoomBookingApp/FFLMeetingRoomBookingApp.Web/Views/MeetingRooms/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVldGluZ1Jvb21zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Apps/FFLMeetingRoomBookingApp/FFLMeetingRoomBookingApp.Web/Views/MeetingRooms/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVldGluZ1Jvb21zXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Apps/FFLMeetingRoomBookingApp/FFLMeetingRoomBookingApp.Web/Views/MeetingRooms/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVldGluZ1Jvb21zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Apps/FFLMeetingRoomBookingApp/FFLMeetingRoomBookingApp.Web/Views/MeetingRooms/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVldGluZ1Jvb21zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Apps/FFLMeetingRoomBookingApp/FFLMeetingRoomBookingApp.Web/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -46,16 +82,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Apps/FFLMeetingRoomBookingApp/FFLMeetingRoomBookingApp.Web/Views/Users/AddUser.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcQWRkVXNlci5jc2h0bWw=
+[C:/Apps/FFLMeetingRoomBookingApp/FFLMeetingRoomBookingApp.Web/Views/Users/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Apps/FFLMeetingRoomBookingApp/FFLMeetingRoomBookingApp.Web/Views/Users/DisplayUsers.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRGlzcGxheVVzZXJzLmNzaHRtbA==
+[C:/Apps/FFLMeetingRoomBookingApp/FFLMeetingRoomBookingApp.Web/Views/Users/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Apps/FFLMeetingRoomBookingApp/FFLMeetingRoomBookingApp.Web/Views/Users/UpdateUser.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcVXBkYXRlVXNlci5jc2h0bWw=
+[C:/Apps/FFLMeetingRoomBookingApp/FFLMeetingRoomBookingApp.Web/Views/Users/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Apps/FFLMeetingRoomBookingApp/FFLMeetingRoomBookingApp.Web/Views/Users/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Apps/FFLMeetingRoomBookingApp/FFLMeetingRoomBookingApp.Web/Views/Users/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Apps/FFLMeetingRoomBookingApp/FFLMeetingRoomBookingApp.Web/Views/_ViewImports.cshtml]
