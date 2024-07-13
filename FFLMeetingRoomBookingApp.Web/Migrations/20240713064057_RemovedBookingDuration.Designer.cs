@@ -4,6 +4,7 @@ using FFLMeetingRoomBookingApp.Web.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FFLMeetingRoomBookingApp.Web.Migrations
 {
     [DbContext(typeof(FFLMeetingRoomBookingAppWebContext))]
-    partial class FFLMeetingRoomBookingAppWebContextModelSnapshot : ModelSnapshot
+    [Migration("20240713064057_RemovedBookingDuration")]
+    partial class RemovedBookingDuration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

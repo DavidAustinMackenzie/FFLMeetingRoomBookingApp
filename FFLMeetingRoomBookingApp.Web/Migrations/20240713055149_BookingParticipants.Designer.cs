@@ -4,6 +4,7 @@ using FFLMeetingRoomBookingApp.Web.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FFLMeetingRoomBookingApp.Web.Migrations
 {
     [DbContext(typeof(FFLMeetingRoomBookingAppWebContext))]
-    partial class FFLMeetingRoomBookingAppWebContextModelSnapshot : ModelSnapshot
+    [Migration("20240713055149_BookingParticipants")]
+    partial class BookingParticipants
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -30,11 +33,14 @@ namespace FFLMeetingRoomBookingApp.Web.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BookingId"));
 
+                    b.Property<DateTime>("BookingDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("EndDate")
-                        .HasColumnType("datetime2");
+                    b.Property<double>("MeetingDuration")
+                        .HasColumnType("float");
 
                     b.Property<int>("MeetingRoomId")
                         .HasColumnType("int");
@@ -45,9 +51,6 @@ namespace FFLMeetingRoomBookingApp.Web.Migrations
                     b.Property<string>("Participants")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("StartDate")
-                        .HasColumnType("datetime2");
 
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime2");

@@ -3,20 +3,12 @@
   "WorkspaceRootPath": "C:\\Apps\\FFLMeetingRoomBookingApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8489840E-15DA-481D-AD4A-7E0E811B3099}|FFLMeetingRoomBookingApp.Web\\FFLMeetingRoomBookingApp.Web.csproj|c:\\apps\\fflmeetingroombookingapp\\fflmeetingroombookingapp.web\\controllers\\bookingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8489840E-15DA-481D-AD4A-7E0E811B3099}|FFLMeetingRoomBookingApp.Web\\FFLMeetingRoomBookingApp.Web.csproj|solutionrelative:fflmeetingroombookingapp.web\\controllers\\bookingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8489840E-15DA-481D-AD4A-7E0E811B3099}|FFLMeetingRoomBookingApp.Web\\FFLMeetingRoomBookingApp.Web.csproj|c:\\apps\\fflmeetingroombookingapp\\fflmeetingroombookingapp.web\\views\\meetingrooms\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8489840E-15DA-481D-AD4A-7E0E811B3099}|FFLMeetingRoomBookingApp.Web\\FFLMeetingRoomBookingApp.Web.csproj|solutionrelative:fflmeetingroombookingapp.web\\views\\meetingrooms\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Apps\\FFLMeetingRoomBookingApp\\FFLMeetingRoomBookingApp.Web\\Migrations\\20240712111615_AddedBookingDateForBooking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:FFLMeetingRoomBookingApp.Web\\Migrations\\20240712111615_AddedBookingDateForBooking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8489840E-15DA-481D-AD4A-7E0E811B3099}|FFLMeetingRoomBookingApp.Web\\FFLMeetingRoomBookingApp.Web.csproj|c:\\apps\\fflmeetingroombookingapp\\fflmeetingroombookingapp.web\\models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8489840E-15DA-481D-AD4A-7E0E811B3099}|FFLMeetingRoomBookingApp.Web\\FFLMeetingRoomBookingApp.Web.csproj|solutionrelative:fflmeetingroombookingapp.web\\models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8489840E-15DA-481D-AD4A-7E0E811B3099}|FFLMeetingRoomBookingApp.Web\\FFLMeetingRoomBookingApp.Web.csproj|c:\\apps\\fflmeetingroombookingapp\\fflmeetingroombookingapp.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8489840E-15DA-481D-AD4A-7E0E811B3099}|FFLMeetingRoomBookingApp.Web\\FFLMeetingRoomBookingApp.Web.csproj|solutionrelative:fflmeetingroombookingapp.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{8489840E-15DA-481D-AD4A-7E0E811B3099}|FFLMeetingRoomBookingApp.Web\\FFLMeetingRoomBookingApp.Web.csproj|c:\\apps\\fflmeetingroombookingapp\\fflmeetingroombookingapp.web\\views\\meetingrooms\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8489840E-15DA-481D-AD4A-7E0E811B3099}|FFLMeetingRoomBookingApp.Web\\FFLMeetingRoomBookingApp.Web.csproj|solutionrelative:fflmeetingroombookingapp.web\\views\\meetingrooms\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,53 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "20240712111615_AddedBookingDateForBooking.cs",
-              "DocumentMoniker": "C:\\Apps\\FFLMeetingRoomBookingApp\\FFLMeetingRoomBookingApp.Web\\Migrations\\20240712111615_AddedBookingDateForBooking.cs",
-              "RelativeDocumentMoniker": "FFLMeetingRoomBookingApp.Web\\Migrations\\20240712111615_AddedBookingDateForBooking.cs",
-              "ToolTip": "C:\\Apps\\FFLMeetingRoomBookingApp\\FFLMeetingRoomBookingApp.Web\\Migrations\\20240712111615_AddedBookingDateForBooking.cs",
-              "RelativeToolTip": "FFLMeetingRoomBookingApp.Web\\Migrations\\20240712111615_AddedBookingDateForBooking.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-12T11:16:15.747Z",
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Apps\\FFLMeetingRoomBookingApp\\FFLMeetingRoomBookingApp.Web\\Views\\MeetingRooms\\Details.cshtml",
+              "RelativeDocumentMoniker": "FFLMeetingRoomBookingApp.Web\\Views\\MeetingRooms\\Details.cshtml",
+              "ToolTip": "C:\\Apps\\FFLMeetingRoomBookingApp\\FFLMeetingRoomBookingApp.Web\\Views\\MeetingRooms\\Details.cshtml",
+              "RelativeToolTip": "FFLMeetingRoomBookingApp.Web\\Views\\MeetingRooms\\Details.cshtml",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABUAAABeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-13T11:17:36.656Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "BookingsController.cs",
-              "DocumentMoniker": "C:\\Apps\\FFLMeetingRoomBookingApp\\FFLMeetingRoomBookingApp.Web\\Controllers\\BookingsController.cs",
-              "RelativeDocumentMoniker": "FFLMeetingRoomBookingApp.Web\\Controllers\\BookingsController.cs",
-              "ToolTip": "C:\\Apps\\FFLMeetingRoomBookingApp\\FFLMeetingRoomBookingApp.Web\\Controllers\\BookingsController.cs",
-              "RelativeToolTip": "FFLMeetingRoomBookingApp.Web\\Controllers\\BookingsController.cs",
-              "ViewState": "AQIAAEQAAAAAAAAAAAAgwE4AAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-12T11:13:54.825Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Booking.cs",
-              "DocumentMoniker": "C:\\Apps\\FFLMeetingRoomBookingApp\\FFLMeetingRoomBookingApp.Web\\Models\\Booking.cs",
-              "RelativeDocumentMoniker": "FFLMeetingRoomBookingApp.Web\\Models\\Booking.cs",
-              "ToolTip": "C:\\Apps\\FFLMeetingRoomBookingApp\\FFLMeetingRoomBookingApp.Web\\Models\\Booking.cs",
-              "RelativeToolTip": "FFLMeetingRoomBookingApp.Web\\Models\\Booking.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-12T11:08:50.837Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Apps\\FFLMeetingRoomBookingApp\\FFLMeetingRoomBookingApp.Web\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "FFLMeetingRoomBookingApp.Web\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Apps\\FFLMeetingRoomBookingApp\\FFLMeetingRoomBookingApp.Web\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "FFLMeetingRoomBookingApp.Web\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAswBsAAAB7AAAA",
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Apps\\FFLMeetingRoomBookingApp\\FFLMeetingRoomBookingApp.Web\\Views\\MeetingRooms\\Delete.cshtml",
+              "RelativeDocumentMoniker": "FFLMeetingRoomBookingApp.Web\\Views\\MeetingRooms\\Delete.cshtml",
+              "ToolTip": "C:\\Apps\\FFLMeetingRoomBookingApp\\FFLMeetingRoomBookingApp.Web\\Views\\MeetingRooms\\Delete.cshtml",
+              "RelativeToolTip": "FFLMeetingRoomBookingApp.Web\\Views\\MeetingRooms\\Delete.cshtml",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAABcAAABFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-12T10:55:10.391Z",
+              "WhenOpened": "2024-07-13T11:17:35.458Z",
               "EditorCaption": ""
             }
           ]
