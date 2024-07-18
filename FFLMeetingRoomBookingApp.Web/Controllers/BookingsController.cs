@@ -62,6 +62,17 @@ namespace FFLMeetingRoomBookingApp.Web.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("BookingId,MeetingRoomId,UserId,StartDate,EndDate,NumberOfPeople,Participants,CreatedAt,UpdatedAt,BookedBy")] Booking booking)
         {
+            if (booking.StartDate == booking.EndDate)
+            {
+                ModelState.AddModelError("StartDate",
+                                          "The start and end meeting can't be the same.");
+            }
+
+            if (booking.EndDate < booking.StartDate)
+            {
+                ModelState.AddModelError("EndDate",
+                                          "The meeting finish time must be after that start time.");
+            }
             if (ModelState.IsValid)
             {
                 booking.CreatedAt = DateTime.Now;
