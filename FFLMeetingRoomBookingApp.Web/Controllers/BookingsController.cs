@@ -49,8 +49,8 @@ namespace FFLMeetingRoomBookingApp.Web.Controllers
         // GET: Bookings/Create
         public IActionResult Create()
         {
-            ViewData["MeetingRoomId"] = new SelectList(_context.MeetingRoom, "MeetingRoomId", "MeetingRoomName");
-            ViewData["UserId"] = new SelectList(_context.User, "UserId", "FullName");
+            ViewData["MeetingRoomId"] = new SelectList(_context.MeetingRoom, "MeetingRoomId", "MeetingRoomId");
+            ViewData["UserId"] = new SelectList(_context.User, "UserId", "UserId");
             return View();
         }
 
@@ -59,18 +59,16 @@ namespace FFLMeetingRoomBookingApp.Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("BookingId,MeetingRoomId,UserId,StartDate,EndDate,NumberOfPeople,Participants,CreatedAt,UpdatedAt")] Booking booking)
+        public async Task<IActionResult> Create([Bind("BookingId,MeetingRoomId,UserId,StartDate,EndDate,NumberOfPeople,Participants,CreatedAt,UpdatedAt,BookedBy")] Booking booking)
         {
             if (ModelState.IsValid)
             {
-                booking.UpdatedAt = DateTime.Now;
-                booking.CreatedAt = DateTime.Now;
                 _context.Add(booking);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["MeetingRoomId"] = new SelectList(_context.MeetingRoom, "MeetingRoomId", "MeetingRoomId", booking.MeetingRoomId);
-            ViewData["UserId"] = new SelectList(_context.User, "UserId", "UserId", booking.UserId);
+            ViewData["MeetingRoomId"] = new SelectList(_context.MeetingRoom, "MeetingRoomId", "MeetingRoomName", booking.MeetingRoomId);
+            ViewData["UserId"] = new SelectList(_context.User, "UserId", "FullName", booking.UserId);
             return View(booking);
         }
 
@@ -87,8 +85,8 @@ namespace FFLMeetingRoomBookingApp.Web.Controllers
             {
                 return NotFound();
             }
-            ViewData["MeetingRoomId"] = new SelectList(_context.MeetingRoom, "MeetingRoomId", "MeetingRoomName", booking.MeetingRoomId);
-            ViewData["UserId"] = new SelectList(_context.User, "UserId", "FullName", booking.UserId);
+            ViewData["MeetingRoomId"] = new SelectList(_context.MeetingRoom, "MeetingRoomId", "MeetingRoomId", booking.MeetingRoomId);
+            ViewData["UserId"] = new SelectList(_context.User, "UserId", "UserId", booking.UserId);
             return View(booking);
         }
 
@@ -97,7 +95,7 @@ namespace FFLMeetingRoomBookingApp.Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("BookingId,MeetingRoomId,UserId,StartDate,EndDate,NumberOfPeople,Participants,CreatedAt,UpdatedAt")] Booking booking)
+        public async Task<IActionResult> Edit(int id, [Bind("BookingId,MeetingRoomId,UserId,StartDate,EndDate,NumberOfPeople,Participants,CreatedAt,UpdatedAt,BookedBy")] Booking booking)
         {
             if (id != booking.BookingId)
             {
@@ -108,7 +106,6 @@ namespace FFLMeetingRoomBookingApp.Web.Controllers
             {
                 try
                 {
-                    booking.UpdatedAt = DateTime.Now;
                     _context.Update(booking);
                     await _context.SaveChangesAsync();
                 }
@@ -125,8 +122,8 @@ namespace FFLMeetingRoomBookingApp.Web.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["MeetingRoomId"] = new SelectList(_context.MeetingRoom, "MeetingRoomId", "MeetingRoomId", booking.MeetingRoomId);
-            ViewData["UserId"] = new SelectList(_context.User, "UserId", "UserId", booking.UserId);
+            ViewData["MeetingRoomId"] = new SelectList(_context.MeetingRoom, "MeetingRoomId", "MeetingRoomName", booking.MeetingRoomId);
+            ViewData["UserId"] = new SelectList(_context.User, "UserId", "FullName", booking.UserId);
             return View(booking);
         }
 

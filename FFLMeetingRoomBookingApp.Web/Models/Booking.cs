@@ -20,6 +20,8 @@
 
         public DateTime UpdatedAt { get; set; }
 
+        public string BookedBy {  get; set; }
+
         public User? User { get; set; }
 
         public MeetingRoom? MeetingRoom { get; set; }
