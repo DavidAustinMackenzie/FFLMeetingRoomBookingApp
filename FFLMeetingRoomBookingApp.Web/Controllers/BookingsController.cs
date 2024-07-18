@@ -49,8 +49,8 @@ namespace FFLMeetingRoomBookingApp.Web.Controllers
         // GET: Bookings/Create
         public IActionResult Create()
         {
-            ViewData["MeetingRoomId"] = new SelectList(_context.MeetingRoom, "MeetingRoomId", "MeetingRoomId");
-            ViewData["UserId"] = new SelectList(_context.User, "UserId", "UserId");
+            ViewData["MeetingRoomId"] = new SelectList(_context.MeetingRoom, "MeetingRoomId", "MeetingRoomName");
+            ViewData["UserId"] = new SelectList(_context.User, "UserId", "FullName");
             return View();
         }
 
@@ -85,8 +85,8 @@ namespace FFLMeetingRoomBookingApp.Web.Controllers
             {
                 return NotFound();
             }
-            ViewData["MeetingRoomId"] = new SelectList(_context.MeetingRoom, "MeetingRoomId", "MeetingRoomId", booking.MeetingRoomId);
-            ViewData["UserId"] = new SelectList(_context.User, "UserId", "UserId", booking.UserId);
+            ViewData["MeetingRoomId"] = new SelectList(_context.MeetingRoom, "MeetingRoomId", "MeetingRoomName", booking.MeetingRoomId);
+            ViewData["UserId"] = new SelectList(_context.User, "UserId", "FullName", booking.UserId);
             return View(booking);
         }
 
