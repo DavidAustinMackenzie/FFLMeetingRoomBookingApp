@@ -56,6 +56,12 @@ namespace FFLMeetingRoomBookingApp.Web.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("MeetingRoomId,MeetingRoomName")] MeetingRoom meetingRoom)
         {
+            if (_context.MeetingRoom.Any(m => m.MeetingRoomName== meetingRoom.MeetingRoomName))
+            {
+                ModelState.AddModelError("MeetingRoomName",
+                                          "The meeting room name is already in use.");
+            }
+
             if (ModelState.IsValid)
             {
                 _context.Add(meetingRoom);
@@ -88,11 +94,6 @@ namespace FFLMeetingRoomBookingApp.Web.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("MeetingRoomId,MeetingRoomName")] MeetingRoom meetingRoom)
         {
-            if (id != meetingRoom.MeetingRoomId)
-            {
-                return NotFound();
-            }
-
             if (ModelState.IsValid)
             {
                 try

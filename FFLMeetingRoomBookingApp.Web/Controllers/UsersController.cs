@@ -56,6 +56,18 @@ namespace FFLMeetingRoomBookingApp.Web.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("UserId,FullName,Type,Email,Password")] User user)
         {
+            if (_context.User.Any(u => u.Email== user.Email))
+            {
+                ModelState.AddModelError("Email",
+                                          "The email is already in use.");
+            }
+
+            if (_context.User.Any(u => u.FullName == user.FullName))
+            {
+                ModelState.AddModelError("FullName",
+                                          "The name is already in use.");
+            }
+
             if (ModelState.IsValid)
             {
                 _context.Add(user);
@@ -88,11 +100,6 @@ namespace FFLMeetingRoomBookingApp.Web.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("UserId,FullName,Type,Email,Password")] User user)
         {
-            if (id != user.UserId)
-            {
-                return NotFound();
-            }
-
             if (ModelState.IsValid)
             {
                 try
