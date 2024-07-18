@@ -14,27 +14,27 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="BookingId" />
             <div class="mt-3">
-                <label asp-for="MeetingRoomId" class="control-label"></label>
+                <label asp-for="MeetingRoomId" class="control-label">Meeting room</label>
                 <select asp-for="MeetingRoomId" class="form-control" asp-items="ViewBag.MeetingRoomId"></select>
                 <span asp-validation-for="MeetingRoomId" class="text-danger"></span>
             </div>
             <div class="mt-3">
-                <label asp-for="UserId" class="control-label"></label>
+                <label asp-for="UserId" class="control-label">Booked for</label>
                 <select asp-for="UserId" class="form-control" asp-items="ViewBag.UserId"></select>
                 <span asp-validation-for="UserId" class="text-danger"></span>
             </div>
             <div class="mt-3">
-                <label asp-for="StartDate" class="control-label"></label>
+                <label asp-for="StartDate" class="control-label">Start time</label>
                 <input asp-for="StartDate" class="form-control" />
                 <span asp-validation-for="StartDate" class="text-danger"></span>
             </div>
             <div class="mt-3">
-                <label asp-for="EndDate" class="control-label"></label>
+                <label asp-for="EndDate" class="control-label">End time</label>
                 <input asp-for="EndDate" class="form-control" />
                 <span asp-validation-for="EndDate" class="text-danger"></span>
             </div>
             <div class="mt-3">
-                <label asp-for="NumberOfPeople" class="control-label"></label>
+                <label asp-for="NumberOfPeople" class="control-label">Number of people</label>
                 <input asp-for="NumberOfPeople" class="form-control" />
                 <span asp-validation-for="NumberOfPeople" class="text-danger"></span>
             </div>
@@ -44,18 +44,8 @@
                 <span asp-validation-for="Participants" class="text-danger"></span>
             </div>
             <div class="mt-3">
-                <label asp-for="CreatedAt" class="control-label"></label>
-                <input asp-for="CreatedAt" class="form-control" />
-                <span asp-validation-for="CreatedAt" class="text-danger"></span>
-            </div>
-            <div class="mt-3">
-                <label asp-for="UpdatedAt" class="control-label"></label>
-                <input asp-for="UpdatedAt" class="form-control" />
-                <span asp-validation-for="UpdatedAt" class="text-danger"></span>
-            </div>
-            <div class="mt-3">
                 <label asp-for="BookedBy" class="control-label"></label>
-                <input asp-for="BookedBy" class="form-control" />
+                <select asp-for="BookedBy" class="form-control" asp-items="ViewBag.BookedBy"></select>
                 <span asp-validation-for="BookedBy" class="text-danger"></span>
             </div>
             <div class="mt-3">

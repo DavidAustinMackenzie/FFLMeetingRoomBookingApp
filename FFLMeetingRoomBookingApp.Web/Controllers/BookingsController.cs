@@ -51,6 +51,7 @@ namespace FFLMeetingRoomBookingApp.Web.Controllers
         {
             ViewData["MeetingRoomId"] = new SelectList(_context.MeetingRoom, "MeetingRoomId", "MeetingRoomName");
             ViewData["UserId"] = new SelectList(_context.User, "UserId", "FullName");
+            ViewData["BookedBy"] = new SelectList(_context.User, "FullName", "FullName");
             return View();
         }
 
@@ -63,12 +64,15 @@ namespace FFLMeetingRoomBookingApp.Web.Controllers
         {
             if (ModelState.IsValid)
             {
+                booking.CreatedAt = DateTime.Now;
+                booking.UpdatedAt = DateTime.Now;
                 _context.Add(booking);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             ViewData["MeetingRoomId"] = new SelectList(_context.MeetingRoom, "MeetingRoomId", "MeetingRoomName", booking.MeetingRoomId);
             ViewData["UserId"] = new SelectList(_context.User, "UserId", "FullName", booking.UserId);
+            ViewData["BookedBy"] = new SelectList(_context.User, "FullName", "FullName", booking.BookedBy);
             return View(booking);
         }
 
@@ -87,6 +91,7 @@ namespace FFLMeetingRoomBookingApp.Web.Controllers
             }
             ViewData["MeetingRoomId"] = new SelectList(_context.MeetingRoom, "MeetingRoomId", "MeetingRoomName", booking.MeetingRoomId);
             ViewData["UserId"] = new SelectList(_context.User, "UserId", "FullName", booking.UserId);
+            ViewData["BookedBy"] = new SelectList(_context.User, "FullName", "FullName",booking.BookedBy);
             return View(booking);
         }
 
@@ -106,6 +111,7 @@ namespace FFLMeetingRoomBookingApp.Web.Controllers
             {
                 try
                 {
+                    booking.UpdatedAt = DateTime.Now;
                     _context.Update(booking);
                     await _context.SaveChangesAsync();
                 }
@@ -124,6 +130,7 @@ namespace FFLMeetingRoomBookingApp.Web.Controllers
             }
             ViewData["MeetingRoomId"] = new SelectList(_context.MeetingRoom, "MeetingRoomId", "MeetingRoomName", booking.MeetingRoomId);
             ViewData["UserId"] = new SelectList(_context.User, "UserId", "FullName", booking.UserId);
+            ViewData["BookedBy"] = new SelectList(_context.User, "FullName", "FullName", booking.BookedBy);
             return View(booking);
         }
 
