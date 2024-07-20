@@ -7,6 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using FFLMeetingRoomBookingApp.Web.Data;
 using FFLMeetingRoomBookingApp.Web.Models;
+using Microsoft.Graph.Models;
+using Azure.Identity;
+using Microsoft.Graph;
+using static System.Formats.Asn1.AsnWriter;
+using Microsoft.Extensions.Options;
 
 namespace FFLMeetingRoomBookingApp.Web.Controllers
 {
@@ -211,9 +216,43 @@ namespace FFLMeetingRoomBookingApp.Web.Controllers
         }
 
         // GET: Bookings/SendInviteConfirmed
-        public IActionResult SendInviteConfirmed()
+        public async Task<IActionResult> SendInviteConfirmed()
         {
-                return View();
+            /*var scopes = new[] { "User.Read" };
+            var clientId = "YOUR_CLIENT_ID";
+            var tenantId = "common";
+
+            // using Azure.Identity;
+            var options = new DeviceCodeCredentialOptions
+            {
+                AuthorityHost = AzureAuthorityHosts.AzurePublicCloud,
+                ClientId = clientId,
+                TenantId = tenantId,
+                // Callback function that receives the user prompt
+                // Prompt contains the generated device code that user must
+                // enter during the auth process in the browser
+                DeviceCodeCallback = (code, cancellation) =>
+                {
+                    Console.WriteLine(code.Message);
+                    return Task.FromResult(0);
+                },
+            };
+
+            var deviceCodeCredential = new DeviceCodeCredential(options);
+
+            var graphClient = new GraphServiceClient(deviceCodeCredential, scopes);
+
+            var requestBody = new OnlineMeeting
+            {
+                StartDateTime = DateTimeOffset.Parse("2019-07-12T14:30:34.2444915-07:00"),
+                EndDateTime = DateTimeOffset.Parse("2019-07-12T15:00:34.2464912-07:00"),
+                Subject = "User Token Meeting",
+            };
+
+            // To initialize your graphClient, see https://learn.microsoft.com/en-us/graph/sdks/create-client?from=snippets&tabs=csharp
+            var result = await graphClient.Me.OnlineMeetings.PostAsync(requestBody);*/
+
+            return View();
         }
 
         private bool BookingExists(int id)
