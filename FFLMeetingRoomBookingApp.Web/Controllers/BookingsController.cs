@@ -73,6 +73,15 @@ namespace FFLMeetingRoomBookingApp.Web.Controllers
                 ModelState.AddModelError("EndDate",
                                           "The meeting finish time must be after that start time.");
             }
+
+
+            if (_context.Booking.Any(b => b.MeetingRoomId == booking.MeetingRoomId 
+                && b.StartDate == booking.StartDate))
+            {
+                ModelState.AddModelError("StartDate",
+                                          "The meeting room is already booked for this time.");
+            }
+
             if (ModelState.IsValid)
             {
                 booking.CreatedAt = DateTime.Now;
