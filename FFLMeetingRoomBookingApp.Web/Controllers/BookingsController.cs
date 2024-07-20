@@ -189,6 +189,33 @@ namespace FFLMeetingRoomBookingApp.Web.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+
+        // GET: Bookings/SendInvite/5
+        public async Task<IActionResult> SendInvite(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var booking = await _context.Booking
+                .Include(b => b.MeetingRoom)
+                .Include(b => b.User)
+                .FirstOrDefaultAsync(m => m.BookingId == id);
+            if (booking == null)
+            {
+                return NotFound();
+            }
+
+            return View(booking);
+        }
+
+        // GET: Bookings/SendInviteConfirmed
+        public IActionResult SendInviteConfirmed()
+        {
+                return View();
+        }
+
         private bool BookingExists(int id)
         {
             return _context.Booking.Any(e => e.BookingId == id);
