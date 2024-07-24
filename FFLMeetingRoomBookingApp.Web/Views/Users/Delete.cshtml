@@ -38,8 +38,7 @@
     </dl>
     
     <form asp-action="Delete">
-        <input type="hidden" asp-for="UserId" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <input type="submit" value="Delete" class="btn btn-danger" asp-route-id="@Model?.UserId" />
         <a class="btn btn-secondary" asp-action="Index">Back to List</a>
     </form>
 </div>
