@@ -147,13 +147,22 @@ namespace FFLMeetingRoomBookingApp.Web.Controllers
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var user = await _context.User.FindAsync(id);
-            if (user != null)
+            if (user == null)
             {
-                _context.User.Remove(user);
+                return RedirectToAction(nameof(Index));
             }
 
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            try
+            {
+                _context.Remove(user);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            catch (DbUpdateConcurrencyException ex)
+            {
+                Console.WriteLine(ex.Message);
+                return RedirectToAction(nameof(Delete), new { id = id, saveChangesError = true });
+            }
         }
 
         private bool UserExists(int id)
